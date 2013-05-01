@@ -1,89 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Demo 1 - Menucool Image Slider</title>
+    <link href="themes/1/js-image-slider.css" rel="stylesheet" type="text/css" />
+    <script src="themes/1/js-image-slider.js" type="text/javascript"></script>
+    <link href="generic.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="div1"><h2>Demo 1 - Menucool Image Slider</h2>
+        <p>Demos: <a href="demo1.html" class="current">1</a><a href="demo2.html">2</a><a href="demo3.html">3</a><a href="demo4.html">4</a>
+        <a href="demo5.html">5</a><a href="demo6.html">6</a><a href="demo7.html">7</a><a href="demo8.html">8</a></p>
+    </div>
+    <div id="sliderFrame">
+        <div id="ribbon"></div>
+        <div id="slider">
+            <a href="http://www.menucool.com/jquery-slider" target="_blank">
+                <img src="images/image-slider-1.jpg" alt="Welcome to Menucool.com" />
+            </a>
+            <img src="images/image-slider-2.jpg" alt="" />
+            <img src="images/image-slider-3.jpg" alt="Pure Javascript. No jQuery. No flash." />
+            <img src="images/image-slider-4.jpg" alt="#htmlcaption" />
+            <img src="images/image-slider-5.jpg" />
+        </div>
+        <div id="htmlcaption" style="display: none;">
+            <em>HTML</em> caption. Link to <a href="http://www.google.com/">Google</a>.
+        </div>
+    </div>
 
-
-#sliderFrame {position:relative;width:700px;margin: 0 auto;} /*remove the "margin:0 auto;" if you want to align the whole slider to the left side*/
-
-#ribbon {width:111px;height:111px;position:absolute;top:-4px;left:-4px;background:url(ribbon.png) no-repeat;z-index:7;}
-        
-#slider {
-    width:700px;height:306px;/* Make it the same size as your images */
-    background:#fff url(loading.gif) no-repeat 50% 50%;
-	position:relative;
-	margin:0 auto;/*make the image slider center-aligned */
-    box-shadow: 0px 1px 5px #999999;
-}
-#slider img {
-	position:absolute;
-	border:none;
-	display:none;
-}
-
-/* the link style (if an image is wrapped in a link) */
-#slider a.imgLink {
-	z-index:2;
-	display:none;position:absolute;
-	top:0px;left:0px;border:0;padding:0;margin:0;
-	width:100%;height:100%;
-}
-
-/* Caption styles */
-div.mc-caption-bg, div.mc-caption-bg2 {
-	position:absolute;
-	width:100%;
-	height:auto;
-	padding:0;
-	left:0px; /*if the caption needs to be aligned from right, specify by right instead of left. i.e. right:20px;*/
-	bottom:0px;/*if the caption needs to be aligned from top, specify by top instead of bottom. i.e. top:150px;*/
-	z-index:3;
-	overflow:hidden;
-	font-size: 0;
-}
-div.mc-caption-bg {
-	background-color:black;
-}
-div.mc-caption {
-	font: bold 14px/20px Arial;
-	color:#EEE;
-	z-index:4;
-	padding:10px 0;/*Adding a padding-left or padding-right here will make the caption area wider than its background. Sometimes you may need to define its width again here to keep it the same width as its background area (div.mc-caption-bg).*/
-	text-align:center;
-}
-div.mc-caption a {
-	color:#FB0;
-}
-div.mc-caption a:hover {
-	color:#DA0;
-}
-
-
-/* ------ built-in navigation bullets wrapper ------*/
-div.navBulletsWrapper  {
-	top:320px; left:280px; /* Its position is relative to the #slider */
-	width:150px;
-	background:none;
-	padding-left:20px;
-	position:relative;
-	z-index:5;
-	cursor:pointer;
-}
-
-/* each bullet */
-div.navBulletsWrapper div 
-{
-    width:11px; height:11px;
-    background:transparent url(bullet.png) no-repeat 0 0;
-    float:left;overflow:hidden;vertical-align:middle;cursor:pointer;
-    margin-right:11px;/* distance between each bullet*/
-    _position:relative;/*IE6 hack*/
-}
-
-div.navBulletsWrapper div.active {background-position:0 -11px;}
-
-
-/* --------- Others ------- */
-#slider 
-{
-	transform: translate3d(0,0,0);
-    -ms-transform:translate3d(0,0,0);
-    -moz-transform:translate3d(0,0,0);
-    -o-transform:translate3d(0,0,0);
-}
+    <div class="div2">
+        <ul>
+            <li><b>Copy & Paste</b>: Copy source code and paste it into your own page. All source codes/files are within the <i>demo1.html</i> and the "<i>\themes\1\</i>" folder</li>
+            <li><b>Transitional effects</b>: You can choose from 17 transitional effects via the <i>sliderOptions</i> in the <em>js-image-slider.js</em>. 
+            Visit <a href="http://www.menucool.com/slider/javascript-image-slider-demo1" target="_blank">Online Demo 1</a> to see how each effect looks and how to customize</li>
+            <li><b>Navigation Bullets</b>: Navigation bullets are created automatically by the script of the image slider.
+            <p>The CSS class selector <span class="green">.navBulletsWrapper</span> can be used to change the nav bullets' positon and style.</p>
+            <p>If you don't need the Navigation Bullets, just hide them via CSS:<br /><span class="green cn">div.navBulletsWrapper  {display:none;}</span></p>
+            </li>
+            <li><b>HTML Caption</b>: Captions are set through each slide image's <span class="cn">alt</span> attribute. If the caption contains HTML content, 
+            you can put the content inside a DIV or SPAN element(usually styled as <span class="cn">display:none</span>), give the element an ID,
+            and set the <span class="cn">alt</span> as "#(the content container's id)". For example: <span class="cn">alt="#caption4"</span></li>
+            <li><b>Free to use</b>: The image slider shown in this demo is for free. All other demos in this download package needs purchasing a license as they include advanced features such as thumbnail support, video support, etc.            
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
